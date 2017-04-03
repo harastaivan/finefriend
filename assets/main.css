@@ -1,0 +1,220 @@
+html {
+    font-family: 'Roboto';
+}
+
+body {
+    background: #f7f7f7;
+    min-height: 900px;
+    font-family: 'Open Sans';
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Open Sans';
+}
+
+a:hover {
+    color: #3e3e3e;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+input {
+    outline: none;
+    background: #f7f7f7;
+}
+
+input:focus {
+    border-bottom: 2px solid black;
+    font-weight: 500;
+}
+
+.logo h1, .logo a {
+    font-family: 'Pacifico';
+    height: 80px;
+    line-height: 80px;
+}
+
+.footer h1, .footer a {
+    font-family: 'Pacifico';
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    background-image: url('http://vignette4.wikia.nocookie.net/joke-battles/images/5/5a/Black.jpg/revision/latest?cb=20161223050425');
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.big-avatar {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    top: 50px;
+    position: relative;
+}
+
+span.profile {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+    font-size: 2em;
+    position: relative;
+    bottom: 22px;
+}
+
+.height-200 {
+    height: 200px;
+}
+
+.padding-medium {
+    padding: 16px;
+}
+
+.padding-top-large {
+    padding-top: 50px;
+}
+
+.padding-bottom-large {
+    padding-bottom: 50px;
+}
+
+.padding-horizontal-medium {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.margin-horizontal-auto {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 200px;
+}
+
+.margin-top-large {
+    margin-top: 50px;  
+}
+
+.margin-top-medium {
+    margin-top: 30px;
+}
+
+.margin-top-small {
+    margin-top: 16px;
+}
+
+.left-thick-border {
+    border-left: 20px solid black;
+}
+
+.bottom-thick-border {
+    border-bottom: 20px solid black;
+}
+
+.gradient {
+    background: linear-gradient(to right bottom, transparent, black);
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+}
+
+.feed {
+    background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.55), black);
+}
+
+.margin-horizontal-medium {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+    
+
+.message {
+    margin-top: 20px;
+}
+
+.message-modal {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.sender {
+    background: #EEE;
+    text-align: right;
+    margin-left: 400px;
+}
+
+.recipient {
+    background: #bcbcbc;
+    margin-right: 400px;
+    font-weight: 700;
+}
+.register input {
+    display: inline;
+    margin: 10px;
+    padding: 10px;
+}
+
+.register input[type='submit'] {
+    border: none;
+}
+
+.register {
+    text-align: left;
+    padding: 120px 70px
+}
+
+.login input {
+    display: inline;
+    margin: 10px;
+    padding: 10px;
+}
+
+.login input[type='submit'] {
+    border: none;
+}
+
+.login {
+    text-align: left;
+    padding: 255px 70px
+}
+
+.colors {
+    margin: 10px;
+    padding-left: 10px;
+}
+.colors input {
+    display: none;
+}
+.colors input + label span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.colors input:checked + label span {
+    border: 5px solid black;
+}
+.colors input + label span, .colors input:checked + label span {;
+    transition:border 0.4s linear;
+}
+
+
+.alertpanel {
+    position: relative;
+    padding: 10px;
+    left: 10px;
+}
+
+.border-darker-gray {
+    border-color: #1b1b1b;
+}
+
+.border-dark-gray {
+    border-color: #353535;
+}
