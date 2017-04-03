@@ -1,10 +1,7 @@
 <?php
 
-//$messages = array(); //nemusi tu byt
-//$allUsers = array();
 $contactedUserIds = array();
 $users = selectAllUsers();
-
 
 
 foreach ($users as $user) {
@@ -40,24 +37,21 @@ foreach ($contactedUsers as $cU) {
         $messages[] = $msg; 
     }
     $lastMsg = end($messages)['text'];
-    echo "      <div class='w3-row message'>
-                    <div class='w3-col' style='width:100px'>
-                        <div class='avatar' style='background-image:url($cU->image)'></div>
+    echo "  <div class='w3-row message'>
+                <div class='w3-col' style='width:100px'>
+                    <div class='avatar' style='background-image:url($cU->image)'></div>
+                </div>
+                <div class='w3-rest'>
+                    <div class='w3-container'>
+                        <h3><a href='?message=$cU->id'>$cU->fullname</a></h3>
+                        <b>Last:</b> $lastMsg                            
                     </div>
-                    <div class='w3-rest'>
-                        <div class='w3-container'>
-                            <h3><a href='?message=$cU->id'>$cU->fullname</a></h3>
-                            <b>Last:</b> $lastMsg                            
-                        </div>
-                    </div>
-                </div>";
+                </div>
+            </div>";
 
 
 }
 
-echo '</div>';
+echo "</div>";
 
-
-
-
-?> 
+?>

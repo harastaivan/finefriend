@@ -1,6 +1,5 @@
 <?php
 
-
 include('other/init.php');
 
 session_start();
@@ -52,13 +51,12 @@ if ( isset($_SESSION['user']) ) {
         $_SESSION['page'] = "?feed=1";
         include('feed.php');
         include('sidepanel.php'); 
-        
     }  
     
 } else {
     include('login/login.php');
 }
 
-
 include('other/footer.php');
+
 ?>

@@ -32,8 +32,8 @@ echo "  <form>
 
 
 //konec labelu
-echo          '</div>
-          </div>
-        </div>';
+echo "  </div>
+    </div>
+</div>";
 
 ?>
