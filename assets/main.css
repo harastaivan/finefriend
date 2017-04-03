@@ -218,3 +218,21 @@ span.profile {
 .border-dark-gray {
     border-color: #353535;
 }
+
+#modal textarea {
+    width: 100%;
+    min-height: 80px;
+    resize: none;
+    outline: none;
+    padding: 10px;
+}
+
+#modal input {
+    width: 100%;
+    background-color: deepskyblue;
+    color: white;
+    border: 0;
+    margin: 10px 0;
+    padding: 10px;
+    font-weight: 700;
+}
