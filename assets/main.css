@@ -117,13 +117,13 @@ span.profile {
 }
 
 .gradient {
-    background: linear-gradient(to right bottom, transparent, black);
+    background: linear-gradient(to right bottom, transparent, rgb(0, 0, 0));
     background-size: 200% 200%;
     background-repeat: no-repeat;
 }
 
 .feed {
-    background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.55), black);
+    background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.1), black);
 }
 
 .margin-horizontal-medium {
