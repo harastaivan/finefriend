@@ -32,10 +32,13 @@ if ( isset($_POST['register']) ) {
             if ($result) {
                 $msg = 'You are successfully registered!';
                 $pre_msg = "<div class='w3-panel w3-green w3-card-8 alertpanel'>";
+                $id = $conn->insert_id;
+                follow($id, $id);
             } else {
                 $msg = 'Try again :(';
                 $pre_msg = "<div class='w3-panel w3-yellow w3-card-8 alertpanel'>";
             }
+               
         } else {
             $msg = 'Email already in use :(';
             $pre_msg = "<div class='w3-panel w3-yellow w3-card-8 alertpanel'>";
