@@ -1,6 +1,6 @@
 <?php
 
-$sender = $_SESSION['user'];
+$sender = clone $_SESSION['user'];
 
 $users = selectAllUsers();
 foreach ($users as $user) {
@@ -18,7 +18,7 @@ echo '  <div id="modal" class="w3-modal" style="display: block">
               class="w3-button w3-display-topright">&times;</span>
               <h2>Messages with ' . $recipient->fullname . ':</h2>';
 
-showMessages($sender->id, $recipient->id);
+showMessages($sender, $recipient);
 
 echo "  <form>
             <div class='w3-row'>

@@ -96,26 +96,28 @@ function sendAMessage($who, $whom, $what) {
     return $result;
 }
 
-function returnMessages($who, $whom) {
+function returnMessages($whoId, $whomId) {
     global $conn;
     $query = "  SELECT * FROM messages
-                WHERE (sender_id = $who AND recipient_id = $whom) OR (sender_id = $whom AND recipient_id = $who)
+                WHERE (sender_id = $whoId AND recipient_id = $whomId) OR (sender_id = $whomId AND recipient_id = $whoId)
                 ORDER BY timestamp ASC";
     $result = $conn->query($query);
     return $result;
 }
 
 function showMessages($who, $whom) {
-    $result = returnMessages($who, $whom);
+    $result = returnMessages($who->id, $whom->id);
     while ( $row = mysqli_fetch_array($result) ) {
         //rozliseni sendera a recipienta
-        if ($row['sender_id'] == $who) {
+        if ($row['sender_id'] == $who->id) {
             $spec = "sender";
+            $name = $who->fullname;
         } else {
             $spec = "recipient";
+            $name = $whom->fullname;
         }
         echo "  <div class='message-modal $spec'>";
-        echo        $row['text'] . "<br>";
+        echo        "<b>" . $name . ": </b>" . $row['text'];
         echo "  </div>";
     }
 }
