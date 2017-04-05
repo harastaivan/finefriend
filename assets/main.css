@@ -248,3 +248,13 @@ span.profile {
     padding: 10px;
     font-weight: 700;
 }
+
+.time-parent {
+    position: relative;
+}
+
+.time {
+    position: absolute;
+    right: 0;
+    top: 10px;
+}

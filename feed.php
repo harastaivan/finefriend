@@ -32,7 +32,7 @@ foreach( $feed as $status ) {
     }
 
     echo "  <div class='padding-medium margin-top-medium w3-$thisUser->color gradient feed'>
-                <div class='w3-row'>
+                <div class='w3-row time-parent'>
                     <div class='w3-col' style='width:100px'>
                         <div class='avatar' style='background-image:url(" . $thisUser->image . ")'></div>
                     </div>
@@ -41,6 +41,9 @@ foreach( $feed as $status ) {
                             <h3><a href='?profile=$thisUser->id'>$thisUser->fullname</a></h3>
                             " . $status['text'] . "
                         </div>
+                    </div>
+                    <div class='time'>
+                        " . showTime(5000) . " ago
                     </div>
                 </div>
             </div>";

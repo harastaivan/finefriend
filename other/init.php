@@ -120,6 +120,27 @@ function showMessages($who, $whom) {
     }
 }
 
+function showTime($timestamp) {
+    $past = time() - $timestamp;
+    if ($past < 60) {
+        $value = $past;
+        $unit = "seconds";
+    } else if (60 =< $past < 60*60) {
+        $value = intdiv($past, 60);
+        $unit = "minutes";
+    } else if (60*60 =< $past < 60*60*24) {
+        $value = intdiv($past, 60*60);
+        $unit = "hours";
+    } else if (60*60*24 =< $past < 60*60*24*7) {
+        $value = intdiv($past, 60*60*24);
+        $unit = "days";
+    } else if (60*60*24*7 =< $past) {
+        $value = intdiv($past, 60*60*24*7);
+        $unit = "weeks";
+    }
+    return $value . " " . $unit;
+}
+
 class User {
     public $id;
     public $name;
