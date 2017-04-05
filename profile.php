@@ -18,14 +18,19 @@ echo "  <div class='w3-row w3-black height-200'>
             <div class='w3-row height-200'>
                 <div class='w3-col l4 m4 s7 margin-horizontal-auto'>";
 
-                showFollowAndMessage($thisUser, $_SESSION['page']);
+if ($_GET["profile"] !== $_SESSION["user"]->id) {
+    showFollowAndMessage($thisUser, $_SESSION['page']);
+} else {
+    echo "<a href='#'>Nastavení účtu</a>";
+}
+                
 
 echo "          </div>
                 <div class='w3-col l4 m4 w3-hide-small margin-horizontal-auto'>
                     &nbsp
                 </div>
                 <div class='w3-col l4 m4 s5 margin-horizontal-auto'>
-                    Show Followers
+                    <a href='#'>Show Followers</a>
                 </div>
             </div>
         </div>
