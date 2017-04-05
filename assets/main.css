@@ -144,20 +144,24 @@ span.profile {
 
 .message-modal {
     margin: 20px;
-    padding: 20px;
+    padding: 20px 30px;
     border-radius: 30px;
 }
 
 .sender {
     background: #EEE;
     text-align: right;
-    margin-left: 400px;
+    margin-left: auto;
+    margin-right: 0;
+    display: table;
 }
 
 .recipient {
     background: #bcbcbc;
-    margin-right: 400px;
     font-weight: 700;
+    margin-left: 0;
+    margin-right: auto;
+    display: table;
 }
 .register input {
     display: inline;
@@ -251,7 +255,7 @@ span.profile {
     font-weight: 700;
 }
 
-.time-parent {
+.relative-parent {
     position: relative;
 }
 
