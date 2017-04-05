@@ -20,7 +20,7 @@ echo "  <div class='w3-row w3-black height-200'>
 
                 showFollowAndMessage($thisUser, $_SESSION['page']);
 
-    echo "      </div>
+echo "          </div>
                 <div class='w3-col l4 m4 w3-hide-small margin-horizontal-auto'>
                     &nbsp
                 </div>
@@ -47,9 +47,9 @@ foreach( $feed as $status ) {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>";
-    
+            </div>";  
 }
+
+echo "  </div>";
 
 ?>
