@@ -45,13 +45,14 @@ function showFollowAndMessage($user, $fromWhere) {
 
 function follow($whoId, $whomId) {
     global $conn;
+    $time = time();
     $query = "  SELECT * FROM follows
                 WHERE follower_id = $whoId AND followed_id = $whomId";
     $result = $conn->query($query);
     
     if(mysqli_num_rows($result) == 0) {
-        $query = "  INSERT INTO follows (follower_id, followed_id)
-                    VALUES ($whoId, $whomId)";
+        $query = "  INSERT INTO follows (follower_id, followed_id, timestamp)
+                    VALUES ($whoId, $whomId, $time)";
         $result = $conn->query($query);
         return $result;
     }
