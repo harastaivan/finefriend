@@ -27,7 +27,7 @@ foreach ($users as $user) {
     
 }
 
-echo '  <div class="padding-horizontal-medium padding-top-large padding-bottom-large">
+echo '  <div class="padding-horizontal-medium padding-top-large padding-bottom-large" id="messages">
         <h2><a href=\'?messages=1\'>Messages</a></h2>';
 
 

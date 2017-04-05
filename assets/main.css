@@ -211,6 +211,14 @@ span.profile {
     left: 10px;
 }
 
+.darker-gray {
+    background-color: #1b1b1b;
+}
+
+.dark-gray {
+    background-color: #353535;
+}
+
 .border-darker-gray {
     border-color: #1b1b1b;
 }

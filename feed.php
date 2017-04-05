@@ -1,4 +1,7 @@
 <?php
+
+include('other/menu.php');
+
 echo "  <div class='w3-row'>
             <div class='w3-col l7 w3-padding-xxlarge'>
                 <div class='w3-border-top w3-topbar w3-bottombar w3-border-black padding-medium margin-top-large'><!--w3-round-xxlarge-->

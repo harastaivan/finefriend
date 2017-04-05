@@ -1,6 +1,6 @@
 <?php
     
-echo "  <div class='padding-horizontal-medium'>
+echo "  <div class='padding-horizontal-medium' id='whoToFollow'>
         <h2><a href='?whoToFollow=1'>Who To Follow</a></h2>";
 
 $users = selectAllUsers();
