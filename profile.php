@@ -21,7 +21,7 @@ echo "  <div class='w3-row w3-black height-200'>
 if ($_GET["profile"] !== $_SESSION["user"]->id) {
     showFollowAndMessage($thisUser, $_SESSION['page']);
 } else {
-    echo "<a href='#'>Nastavení účtu</a>";
+    echo "<a href='?changeSettings=1'>Change Settings</a>";
 }
                 
 

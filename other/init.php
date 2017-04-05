@@ -164,6 +164,62 @@ function showTime($timestamp) {
     return $value . " " . $unit;
 }
 
+function showSettings($user) {
+    echo "  <form>
+                <input type='text' placeholder='Name' class='w3-input vertical-margin-small' name='name' value='$user->name' required>
+                <input type='text' placeholder='Surname' class='w3-input vertical-margin-small' name='surname' value='$user->surname' required>
+                <input type='email' placeholder='Email' class='w3-input vertical-margin-small' name='email' value='$user->email' required>
+                <input type='text' placeholder='Profile picture (URL)' class='w3-input vertical-margin-small' value='$user->image' name='image'>
+                <div class='colors vertical-margin-small'>
+                    <p class='w3-text-gray'>Choose your favorite color:</p>
+                    <input type='radio' id='red' name='color' value='red' checked>
+                    <label for='red'><span class='w3-red'></span></label>
+
+                    <input type='radio' id='pink' name='color' value='pink'>
+                    <label for='pink'><span class='w3-pink'></span></label>  
+
+                    <input type='radio' id='orange' name='color' value='orange'>
+                    <label for='orange'><span class='w3-orange'></span></label>
+
+                    <input type='radio' id='green' name='color' value='green'>
+                    <label for='green'><span class='w3-green'></span></label>
+
+                    <input type='radio' id='teal' name='color' value='teal'>
+                    <label for='teal'><span class='w3-teal'></span></label>
+
+                    <input type='radio' id='cyan' name='color' value='cyan'>
+                    <label for='cyan'><span class='w3-cyan'></span></label>
+
+                    <input type='radio' id='blue' name='color' value='blue'>
+                    <label for='blue'><span class='w3-blue'></span></label>
+
+                    <input type='radio' id='indigo' name='color' value='indigo'>
+                    <label for='indigo'><span class='w3-indigo'></span></label>
+
+                    <input type='radio' id='black' name='color' value='black'>
+                    <label for='black'><span class='w3-black'></span></label>
+                </div>
+
+                <input type='submit' class='w3-input w3-indigo vertical-margin-small' value='Change settings!'>
+                <input type='hidden' name='change' value='1'>
+            </form>";
+}
+
+function changeSettings($get) {
+    global $conn;
+    $id = $_SESSION['user']->id;
+    $name = $get['name'];
+    $surname = $get['surname'];
+    $email = $get['email'];
+    $image = $get['image'];
+    $color = $get['color'];
+    
+    $query = "  UPDATE users SET name = '$name', surname = '$surname', email = '$email', profilepic = '$image', color = '$color'
+                WHERE id = $id";
+    
+    $result = $conn->query($query);
+    return $result;
+}
 
 
 class User {

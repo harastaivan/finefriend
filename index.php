@@ -35,6 +35,8 @@ if ( isset($_SESSION['user']) ) {
         include('message.php');
     } else if ( isset($_GET['sendAMessage']) ) {
         include('sendamessage.php');
+    } else if ( isset($_GET['change']) ) {
+        include('changesettings.php');
     }
     
     if ( isset($_GET['profile']) ) {
@@ -47,6 +49,9 @@ if ( isset($_SESSION['user']) ) {
     } else if ( isset($_GET['whoToFollow']) ) {
         $_SESSION['page'] = "?whoToFollow=" . $_GET['whoToFollow'];
         include('follow.php');
+    } else if ( isset($_GET['changeSettings']) ) {
+        $_SESSION['page'] = "?changeSettings=" . $_GET['changeSettings'];
+        include('settings.php');
     } else {
         $_SESSION['page'] = "?feed=1";
         include('feed.php');

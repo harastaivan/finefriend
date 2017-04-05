@@ -31,9 +31,9 @@
                     </div>
                 </div>
                 <div class='w3-row'>
-                    <div class='w3-col l12 colors'>
+                    <div class='w3-col l12 colors horizontal-margin-small'>
                         <p class='w3-text-gray'>Choose your favorite color:</p>
-                        <input type='radio' id='red' name='color' value='red'>
+                        <input type='radio' id='red' name='color' value='red' checked>
                         <label for='red'><span class='w3-red'></span></label>
 
                         <input type='radio' id='pink' name='color' value='pink'>
@@ -54,7 +54,7 @@
                         <input type='radio' id='blue' name='color' value='blue'>
                         <label for='blue'><span class='w3-blue'></span></label>
 
-                        <input type='radio' id='indigo' name='color' value='indigo' checked>
+                        <input type='radio' id='indigo' name='color' value='indigo'>
                         <label for='indigo'><span class='w3-indigo'></span></label>
 
                         <input type='radio' id='black' name='color' value='black'>

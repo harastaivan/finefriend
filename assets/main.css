@@ -193,8 +193,15 @@ span.profile {
 }
 
 .colors {
-    margin: 10px;
-    padding-left: 10px;
+    
+}
+
+.horizontal-margin-small {
+    margin: 0 10px;
+}
+
+.vertical-margin-small {
+    margin: 10px 0;
 }
 .colors input {
     display: none;
