@@ -27,8 +27,8 @@ foreach ($users as $user) {
     
 }
 
-echo '  <div class="padding-horizontal-medium padding-top-large padding-bottom-large" id="messages">
-        <h2><a href=\'?messages=1\'>Messages</a></h2>';
+echo "  <div class='padding-horizontal-medium padding-top-large padding-bottom-large messages'>
+        <h2><a href='?messages=1'>Messages</a></h2>";
 
 
 foreach ($contactedUsers as $cU) {
@@ -37,6 +37,7 @@ foreach ($contactedUsers as $cU) {
         $messages[] = $msg; 
     }
     $lastMsg = end($messages)['text'];
+    
     echo "  <div class='w3-row message'>
                 <div class='w3-col' style='width:100px'>
                     <div class='avatar' style='background-image:url($cU->image)'></div>
@@ -48,7 +49,6 @@ foreach ($contactedUsers as $cU) {
                     </div>
                 </div>
             </div>";
-
 
 }
 

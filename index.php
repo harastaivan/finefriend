@@ -42,7 +42,6 @@ if ( isset($_SESSION['user']) ) {
     if ( isset($_GET['profile']) ) {
         $_SESSION['page'] = "?profile=" . $_GET['profile'];
         include('profile.php');
-        
     } else if ( isset($_GET['messages']) ) {
         $_SESSION['page'] = "?messages=" . $_GET['messages'];
         include('messages.php');

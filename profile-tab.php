@@ -1,6 +1,6 @@
 <?php
 
-echo "  <div class='w3-row padding-medium' id='profileTab'>
+echo "  <div class='w3-row padding-medium profileTab'>
             <div class='w3-col' style='width:100px'>
                 <div class='avatar' style='background-image:url(" . $_SESSION['user']->image . ")'></div>
             </div>
