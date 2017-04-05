@@ -121,25 +121,48 @@ function showMessages($who, $whom) {
 }
 
 function showTime($timestamp) {
-    $past = time() - $timestamp;
+    $time = time();
+    $past = $time - $timestamp;
     if ($past < 60) {
         $value = $past;
-        $unit = "seconds";
-    } else if (60 =< $past < 60*60) {
-        $value = intdiv($past, 60);
-        $unit = "minutes";
-    } else if (60*60 =< $past < 60*60*24) {
-        $value = intdiv($past, 60*60);
-        $unit = "hours";
-    } else if (60*60*24 =< $past < 60*60*24*7) {
-        $value = intdiv($past, 60*60*24);
-        $unit = "days";
-    } else if (60*60*24*7 =< $past) {
-        $value = intdiv($past, 60*60*24*7);
-        $unit = "weeks";
+        if ($value == 1) {
+            $unit = "second"; 
+        } else {
+            $unit = "seconds";
+        }        
+    } else if (60 <= $past && $past < 3600) {
+        $value = floor($past/60);
+        if ($value == 1) {
+            $unit = "minute"; 
+        } else {
+            $unit = "minutes";
+        } 
+    } else if (3600 <= $past && $past < 86400) {
+        $value = floor($past/3600);
+        if ($value == 1) {
+            $unit = "hour"; 
+        } else {
+            $unit = "hours";
+        } 
+    } else if (86400 <= $past && $past < 604800) {
+        $value = floor($past/86400);
+        if ($value == 1) {
+            $unit = "day"; 
+        } else {
+            $unit = "days";
+        } 
+    } else if (604800 <= $past) {
+        $value = floor($past/604800);
+        if ($value == 1) {
+            $unit = "week"; 
+        } else {
+            $unit = "weeks";
+        } 
     }
     return $value . " " . $unit;
 }
+
+
 
 class User {
     public $id;

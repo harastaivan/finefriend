@@ -43,7 +43,7 @@ foreach( $feed as $status ) {
                         </div>
                     </div>
                     <div class='time'>
-                        " . showTime(5000) . " ago
+                        " . showTime($status['timestamp']) . " ago
                     </div>
                 </div>
             </div>";
