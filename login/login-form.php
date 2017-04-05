@@ -1,4 +1,5 @@
-    <div class='w3-col l6 w3-padding-large w3-center'>
+<div class='w3-row'>
+    <div class='w3-col l6 w3-padding-medium w3-center light-gray'>
     <h1>Log In.</h1>
     <div class='w3-container login'>
         <form method="post">
@@ -26,4 +27,4 @@
         </form>
     </div>
     </div>
-</div>
+    

@@ -1,5 +1,4 @@
-<div class='w3-row'>
-    <div class='w3-col l6 w3-padding-large w3-border-right w3-center w3-border-black w3-rightbar'>
+    <div class='w3-col l6 w3-padding-medium w3-center'>
         <h2>You don't have an account yet?</h2>
         <h2>Register.</h2>
         <div class='w3-container register'>
@@ -75,3 +74,4 @@
             </form>
         </div>
     </div>
+</div>

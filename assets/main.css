@@ -181,6 +181,7 @@ span.profile {
     display: inline;
     margin: 10px;
     padding: 10px;
+    background-color: transparent;
 }
 
 .login input[type='submit'] {
@@ -233,6 +234,10 @@ span.profile {
 
 .dark-gray {
     background-color: #353535;
+}
+
+.light-gray {
+    background-color: #ededed;
 }
 
 .border-darker-gray {

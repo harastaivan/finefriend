@@ -1,7 +1,7 @@
 <?php
     
 echo "  <div class='padding-horizontal-medium whoToFollow'>
-        <h2><a href='?whoToFollow=1'>Who To Follow</a></h2>";
+        <h2><a href='?whoToFollow=1'>Users</a></h2>";
 
 $users = selectAllUsers();
 
