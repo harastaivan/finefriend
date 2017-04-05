@@ -1,4 +1,5 @@
 <?php
+
 $sender = $_SESSION['user'];
 
 $users = selectAllUsers();

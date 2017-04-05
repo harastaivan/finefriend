@@ -72,6 +72,10 @@ span.profile {
     height: 200px;
 }
 
+.height-100 {
+    height: 100px;
+}
+
 .padding-medium {
     padding: 16px;
 }
