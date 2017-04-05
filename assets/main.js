@@ -4,6 +4,8 @@ $(document).ready(function(){
     $("#messages").hide();  
     $("#messages").after($("#whoToFollow").clone());
     $("#whoToFollow").hide();  
+    $("#whoToFollow").after($("#profileTab").clone());
+    $("#profileTab").hide(); 
 })
 
 function showMessages() {
@@ -12,4 +14,8 @@ function showMessages() {
 
 function showWhoToFollow() {
     $("#whoToFollow").toggle(500);
+}
+
+function showProfileTab() {
+    $("#profileTab").toggle(500);
 }
