@@ -19,13 +19,13 @@ if ( isset($_SESSION['user']) ) {
         
         follow($_SESSION['user']->id, $_GET['follow']);
         //include('feed.php');
-        //include('sidepanel.php');
+        //include('sidepanel/sidepanel.php');
         
     } else if ( isset($_GET['unfollow']) ) {
         
         unfollow($_SESSION['user']->id, $_GET['unfollow']);
         //include('feed.php');
-        //include('sidepanel.php');
+        //include('sidepanel/sidepanel.php');
         
     } else if ( isset($_GET['new_status']) ) {
         createStatus($_SESSION['user']->id, $_GET['text']);
@@ -34,9 +34,9 @@ if ( isset($_SESSION['user']) ) {
         $_SESSION['page'] = "?messages=" . $_GET['message'];
         include('message.php');
     } else if ( isset($_GET['sendAMessage']) ) {
-        include('sendamessage.php');
-    } else if ( isset($_GET['change']) ) {
-        include('changesettings.php');
+        include('action/sendamessage.php');
+    } else if ( isset($_GET['changeSettings']) ) {
+        include('action/changesettings.php');
     }
     
     if ( isset($_GET['profile']) ) {
@@ -44,17 +44,17 @@ if ( isset($_SESSION['user']) ) {
         include('profile.php');
     } else if ( isset($_GET['messages']) ) {
         $_SESSION['page'] = "?messages=" . $_GET['messages'];
-        include('messages.php');
+        include('sidepanel/messages-tab.php');
     } else if ( isset($_GET['whoToFollow']) ) {
         $_SESSION['page'] = "?whoToFollow=" . $_GET['whoToFollow'];
-        include('follow.php');
-    } else if ( isset($_GET['changeSettings']) ) {
-        $_SESSION['page'] = "?changeSettings=" . $_GET['changeSettings'];
-        include('settings.php');
+        include('sidepanel/follow-tab.php');
+    } else if ( isset($_GET['showSettings']) ) {
+        $_SESSION['page'] = "?showSettings=" . $_GET['showSettings'];
+        include('action/showsettings.php');
     } else {
         $_SESSION['page'] = "?feed=1";
         include('feed.php');
-        include('sidepanel.php'); 
+        include('sidepanel/sidepanel.php'); 
     }  
     
 } else {

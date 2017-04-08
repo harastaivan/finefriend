@@ -201,7 +201,7 @@ function showSettings($user) {
                 </div>
 
                 <input type='submit' class='w3-input w3-indigo vertical-margin-small' value='Change settings!'>
-                <input type='hidden' name='change' value='1'>
+                <input type='hidden' name='changeSettings' value='1'>
             </form>";
 }
 

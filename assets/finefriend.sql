@@ -1,3 +1,6 @@
+SET NAMES 'utf8';
+SET CHARSET 'utf8';
+
 -- phpMyAdmin SQL Dump
 -- version 4.4.4
 -- http://www.phpmyadmin.net
