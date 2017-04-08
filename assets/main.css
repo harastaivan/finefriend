@@ -219,6 +219,7 @@ span.profile {
 }
 .colors input + label span, .colors input:checked + label span {;
     transition:border 0.4s linear;
+    margin-bottom: 4px;
 }
 
 
