@@ -16,20 +16,20 @@ echo "  <div class='w3-row w3-black height-200'>
                 
             </div>
             <div class='w3-row height-200'>
-                <div class='w3-col l4 m4 s7 margin-horizontal-auto'>";
+                <div class='w3-col l4 m4 s7 margin-horizontal-auto line-height-200'>";
 
 if ($_GET["profile"] !== $_SESSION["user"]->id) {
     showFollowAndMessage($thisUser, $_SESSION['page']);
 } else {
-    echo "<a href='?changeSettings=1'>Change Settings</a>";
+    echo "<a href='?showSettings=1'>Change settings</a>";
 }
                 
 
 echo "          </div>
-                <div class='w3-col l4 m4 w3-hide-small margin-horizontal-auto'>
+                <div class='w3-col l4 m4 w3-hide-small margin-horizontal-auto line-height-200'>
                     &nbsp
                 </div>
-                <div class='w3-col l4 m4 s5 margin-horizontal-auto'>
+                <div class='w3-col l4 m4 s5 margin-horizontal-auto line-height-200'>
                     <a href='#'>Show Followers</a>
                 </div>
             </div>
