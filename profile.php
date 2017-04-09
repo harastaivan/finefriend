@@ -36,6 +36,10 @@ echo "          </div>
         </div>
         <div class='w3-row w3-padding-xxlarge'>";
 
+if ($_GET["profile"] == $_SESSION["user"]->id) {
+    include("status.php");
+}
+
 $feed = $thisUser->returnIndividualFeed();
 
 foreach( $feed as $status ) {

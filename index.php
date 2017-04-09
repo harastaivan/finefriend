@@ -31,7 +31,7 @@ if ( isset($_SESSION['user']) ) {
         
     } else if ( isset($_GET['new_status']) ) {
         createStatus($_SESSION['user']->id, $_GET['text']);
-        echo "<script>location.href = 'index.php'</script>";
+        echo "<script>location.href = 'index.php" . $_SESSION['page'] . "'</script>";
     } else if ( isset($_GET['message']) ) {
         include('action/showmessage.php');
     } else if ( isset($_GET['sendAMessage']) ) {
