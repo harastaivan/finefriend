@@ -30,17 +30,27 @@ echo "          </div>
                     &nbsp
                 </div>
                 <div class='w3-col l4 m4 s5 margin-horizontal-auto line-height-200'>
-                    <a href='#'>Show Followers</a>
+                    <a href='" . $_SESSION['page'] . "&showFollowers=$thisUser->id'>Show Followers</a>
                 </div>
             </div>
-        </div>
-        <div class='w3-row w3-padding-xxlarge'>";
+        </div>";
+
+if (isset($_GET['showFollowers'])) {
+    echo "<div class='w3-row w3-padding-xxlarge'>";
+    showFollowers($_GET['showFollowers']);
+    echo "</div>";
+}
+
+echo "  <div class='w3-row w3-padding-xxlarge'>";
+
+
 
 if ($_GET["profile"] == $_SESSION["user"]->id) {
     include("status.php");
 }
 
 $feed = $thisUser->returnIndividualFeed();
+
 
 foreach( $feed as $status ) {
     

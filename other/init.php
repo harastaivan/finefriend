@@ -44,6 +44,23 @@ function showFollowAndMessage($user, $fromWhere) {
     echo "<a href='" . $fromWhere . "&message=$user->id'>Send a Message</a>";
 }
 
+function showFollowers($followedId) {
+    global $conn;
+    $allUsers = selectAllUsers();
+    
+    $query = "  SELECT users.id, users.name, users.surname, users.email, users.profilepic, users.color, users.timestamp FROM follows
+                JOIN users ON users.id = follows.follower_id
+                WHERE follows.followed_id = $followedId";
+    $result = $conn->query($query);
+    
+    while($row = mysqli_fetch_array($result)) {
+        $user = new User($row);
+        if($user->id != $followedId) {
+            showUser($user, $_SESSION['page']);
+        }
+    }
+}
+
 function follow($whoId, $whomId) {
     global $conn;
     $time = time();
