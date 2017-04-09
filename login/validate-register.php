@@ -21,7 +21,7 @@ if ( isset($_POST['register']) ) {
         if ( $rowcount == 0 ) {
 
             if (empty($img) || $img == '') {
-                $img = 'https://i.gyazo.com/41fd490efd0ca48c391025113a130a68.png';
+                $img = 'assets/default-avatar.jpg';
             }
 
             $query =    "INSERT INTO users (name, surname, email, password, profilepic, color, timestamp) 
