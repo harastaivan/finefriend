@@ -2,20 +2,31 @@
 
 $contactedUserIds = array();
 $users = selectAllUsers();
-
+$messages = array();
+$contactedUsers = array();
 
 foreach ($users as $user) {
     $msgs = returnMessages($user->id, $_SESSION['user']->id); //vsechny zpravy mezi $user a session user
     while($msg = mysqli_fetch_array($msgs)) {
-        $messages[] = $msg; 
+        if ( !in_array($msg, $messages, true) ) {
+            $messages[] = $msg;
+        }
+         
     }
     
-    $last = end($messages); //posledni prvek v messages, abych vytvoril users
-    if ( ($last['sender_id'] == $_SESSION['user']->id) && (!in_array($last['recipient_id'], $contactedUserIds)) ) {
-        $contactedUserIds[] = $last['recipient_id'];
-    } else if ( ($last['recipient_id'] == $_SESSION['user']->id) && (!in_array($last['sender_id'], $contactedUserIds)) ) {
-        $contactedUserIds[] = $last['sender_id'];
+    if ( isset($messages) && !empty($messages)) {
+        $last = end($messages); //posledni prvek v messages, abych vytvoril users
+        
+        if ( ($last['sender_id'] == $_SESSION['user']->id) && (!in_array($last['recipient_id'], $contactedUserIds)) ) {
+            $contactedUserIds[] = $last['recipient_id'];
+        } else if ( ($last['recipient_id'] == $_SESSION['user']->id) && (!in_array($last['sender_id'], $contactedUserIds)) ) {
+            $contactedUserIds[] = $last['sender_id'];
+        }
     }
+    
+    
+    
+    
     
     foreach ($contactedUserIds as $userId) {
         $contactedUser = $user->getUserById($userId);
@@ -34,9 +45,9 @@ echo "  <div class='padding-horizontal-medium padding-top-large padding-bottom-l
 foreach ($contactedUsers as $cU) {
     $msgs = returnMessages($cU->id, $_SESSION['user']->id);
     while($msg = mysqli_fetch_array($msgs)) {
-        $messages[] = $msg; 
+        $individualMessages[] = $msg; 
     }
-    $lastMsg = end($messages)['text'];
+    $lastMsg = end($individualMessages)['text'];
     
     echo "  <div class='w3-row message'>
                 <div class='w3-col' style='width:100px'>
@@ -49,9 +60,14 @@ foreach ($contactedUsers as $cU) {
                     </div>
                 </div>
             </div>";
+}
 
+if (empty($contactedUsers)) {
+    echo "There are no messages yet!";
 }
 
 echo "</div>";
+
+
 
 ?>
