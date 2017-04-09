@@ -7,6 +7,8 @@ session_start();
 include('other/head.php');
 include('other/logo.php');
 
+
+
 //odhlasit se
 if ( isset($_GET['logout']) ) {
     unset($_SESSION['user']);
@@ -31,8 +33,7 @@ if ( isset($_SESSION['user']) ) {
         createStatus($_SESSION['user']->id, $_GET['text']);
         echo "<script>location.href = 'index.php'</script>";
     } else if ( isset($_GET['message']) ) {
-        $_SESSION['page'] = "?messages=" . $_GET['message'];
-        include('message.php');
+        include('action/showmessage.php');
     } else if ( isset($_GET['sendAMessage']) ) {
         include('action/sendamessage.php');
     } else if ( isset($_GET['changeSettings']) ) {
