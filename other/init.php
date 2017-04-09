@@ -10,7 +10,8 @@ function print_r2($array) {
 
 function selectAllUsers() {
     global $conn;
-    $query = "SELECT * FROM users";
+    $query = "  SELECT * FROM users
+                ORDER BY timestamp DESC";
     $result = $conn->query($query);
     
     while( $row = mysqli_fetch_array($result) ) {
@@ -261,10 +262,10 @@ class User {
         return $result;
     }
     
-    public function doIFollowHim($followedId) {
+    public function doIFollowHim($followed) {
         global $conn;
         $query = "  SELECT * FROM follows
-                    WHERE follower_id = $this->id AND followed_id = $followedId->id";
+                    WHERE follower_id = $this->id AND followed_id = $followed->id";
         $result = $conn->query($query);
         $rowcount = mysqli_num_rows($result);
         
