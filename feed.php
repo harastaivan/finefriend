@@ -20,7 +20,7 @@ foreach( $feed as $status ) {
         }
     }
 
-    echo "  <div class='padding-medium margin-top-medium w3-$thisUser->color gradient'>
+    echo "  <div class='padding-medium margin-top-medium w3-$thisUser->color gradient w3-round-medium'>
                 <div class='w3-row relative-parent'>
                     <div class='w3-col' style='width:100px'>
                         <div class='avatar' style='background-image:url(" . $thisUser->image . ")'></div>

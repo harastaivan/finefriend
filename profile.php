@@ -54,7 +54,7 @@ $feed = $thisUser->returnIndividualFeed();
 
 foreach( $feed as $status ) {
     
-    echo "  <div class='padding-medium margin-top-medium w3-$thisUser->color gradient feed'>
+    echo "  <div class='padding-medium margin-top-medium w3-$thisUser->color gradient feed w3-round-medium'>
                 <div class='w3-row'>
                     <div class='w3-col' style='width:100px'>
                         <div class='avatar' style='background-image:url($thisUser->image)'></div>

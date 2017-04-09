@@ -1,6 +1,6 @@
 <?php
 
-echo "  <div class='w3-border-top w3-topbar w3-bottombar w3-border-black padding-medium margin-top-large'><!--w3-round-xxlarge-->
+echo "  <div class='w3-border-top w3-topbar w3-bottombar w3-border-black padding-medium margin-top-large w3-round-medium'><!--w3-round-xxlarge-->
             <div class='w3-row'>
                 <div class='w3-col' style='width:100px'>
                     <div class='avatar' style='background-image:url(" . $_SESSION['user']->image . ")'></div>
