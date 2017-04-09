@@ -8,9 +8,6 @@ echo "  <div class='w3-row padding-medium profileTab'>
                 <div>
                     <h3><a href='?profile=" . $_SESSION['user']->id . "'>" . $_SESSION['user']->fullname . "</a></h3>
                     <a href='?showSettings=1'>Change settings</a> | 
-                    <a href='#'>LUL</a> | 
-                    <a href='#'>ZULUL</a> | 
-                    <a href='#'>LUL</a> | 
                     <a href='?logout=1'>Log Out</a>
                 </div>
             </div>
