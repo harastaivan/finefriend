@@ -16,7 +16,14 @@ echo '  <div id="modal" class="w3-modal" style="display: block">
             <div class="w3-container">
               <span onclick="document.getElementById(\'modal\').style.display=\'none\'; location.href=\'index.php' . $_SESSION['page'] . '\'"
               class="w3-button w3-display-topright">&times;</span>
-              <h2>Messages with ' . $recipient->fullname . ':</h2>';
+              <div class="margin-top-small">
+                <div class="w3-col" style="width:100px">
+                    <div class="avatar margin-bottom-small" style="background-image:url(' . $recipient->image . ')"></div>
+                </div>
+                <div class="w3-rest padding-horizontal-medium">
+                    <h3><a href="?profile=' . $recipient->id . '">' . $recipient->fullname . '</a></h3>
+                </div>
+              </div>';
 
 showMessages($sender, $recipient);
 

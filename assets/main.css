@@ -117,6 +117,10 @@ span.profile {
     margin-top: 16px;
 }
 
+.margin-bottom-small {
+    margin-bottom: 16px;
+}
+
 .left-thick-border {
     border-left: 20px solid black;
 }
