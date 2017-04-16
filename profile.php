@@ -7,7 +7,7 @@ foreach ($users as $user) {
     }
 }
 
-echo "  <div class='w3-row w3-black height-200'>
+echo "  <div class='w3-row w3-black height-200 w3-display-container'>
             <div class='avatar big-avatar' style='background-image:url($thisUser->image)'></div>
             <div class='w3-display-middle w3-large'><span class='profile'>$thisUser->fullname</span></div>
         </div>
