@@ -33,7 +33,7 @@ if ( isset($_SESSION['user']) ) {
         createStatus($_SESSION['user']->id, $_GET['text']);
         echo "<script>location.href = 'index.php" . $_SESSION['page'] . "'</script>";
     } else if ( isset($_GET['message']) ) {
-        include('action/showmessage.php');
+        include('action/showconversation.php');
     } else if ( isset($_GET['sendAMessage']) ) {
         include('action/sendamessage.php');
     } else if ( isset($_GET['changeSettings']) ) {

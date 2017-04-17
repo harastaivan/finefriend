@@ -38,7 +38,7 @@ foreach ($users as $user) {
     
 }
 
-echo "  <div class='padding-horizontal-medium padding-top-large padding-bottom-large messages'>
+echo "  <div class='padding-horizontal-medium vertical-padding-large messages'>
         <h2><a href='?messages=1'>Messages</a></h2>";
 
 
@@ -49,7 +49,7 @@ foreach ($contactedUsers as $cU) {
     }
     $lastMsg = end($individualMessages)['text'];
     
-    echo "  <div class='w3-row message'>
+    echo "  <div class='w3-row margin-top-small'>
                 <div class='w3-col' style='width:100px'>
                     <div class='avatar' style='background-image:url($cU->image)'></div>
                 </div>
