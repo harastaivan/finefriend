@@ -12,6 +12,7 @@ if ($_SESSION["page"] != "?whoToFollow=1") {
 foreach ($users as $user) {
     if( $user->id !== $_SESSION["user"]->id && !$_SESSION["user"]->doIFollowHim($user)) {
         showUser($user, $_SESSION['page']);
+        $shown = true;
         if (isset($howMuch)) {
             $howMuch--;
             if ($howMuch <= 0) {
@@ -19,6 +20,10 @@ foreach ($users as $user) {
             }
         }
     }
+}
+
+if (!isset($shown)) {
+    echo "You are already following all the users!";
 }
 
 echo "</div>";
