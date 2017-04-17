@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    //$("#messages").clone().appendTo("#menu");
     profileTab = $(".profileTab").clone();
     messages = $(".messages").clone();
     whoToFollow = $(".whoToFollow").clone();

@@ -1,3 +1,5 @@
+/* GENERAL */
+
 html {
     font-family: 'Roboto';
 }
@@ -31,16 +33,6 @@ input:focus {
     font-weight: 500;
 }
 
-.logo h1, .logo a {
-    font-family: 'Pacifico';
-    height: 80px;
-    line-height: 80px;
-}
-
-.footer h1, .footer a {
-    font-family: 'Pacifico';
-}
-
 .avatar {
     width: 100px;
     height: 100px;
@@ -49,6 +41,151 @@ input:focus {
     background-size: cover;
     border-radius: 100%;
 }
+
+.padding-medium {
+    padding: 16px;
+}
+
+.padding-horizontal-medium {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.margin-horizontal-auto {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;  
+}
+
+.margin-top-large {
+    margin-top: 50px;  
+}
+
+.margin-top-medium {
+    margin-top: 30px;
+}
+
+.margin-top-small {
+    margin-top: 20px;
+}
+
+.gradient {
+    background: linear-gradient(to right bottom, transparent, rgb(0, 0, 0));
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+}
+
+.time {
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.position-relative {
+    position: relative;
+}
+
+/* LOGIN */
+/* login/register-form.php + action/showsettings.php */
+
+.register input {
+    display: inline;
+    margin: 10px;
+    padding: 10px;
+}
+
+.register input[type='submit'] {
+    border: none;
+}
+
+.register {
+    text-align: left;
+    padding: 120px 70px
+}
+
+.colors input {
+    display: none;
+}
+
+.colors input + label span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.colors input:checked + label span {
+    border: 5px solid black;
+}
+
+.colors input + label span, .colors input:checked + label span {;
+    transition:border 0.4s linear;
+    margin-bottom: 4px;
+}
+
+.horizontal-margin-small {
+    margin: 0 10px;
+}
+
+.vertical-margin-small {
+    margin: 10px 0;
+}
+
+/* login/login-form.php */
+
+.login input {
+    display: inline;
+    margin: 10px;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.login input[type='submit'] {
+    border: none;
+}
+
+.login {
+    text-align: left;
+    padding: 255px 70px
+}
+
+.light-gray {
+    background-color: #ededed;
+}
+
+/* login/login.php */
+
+.alertpanel {
+    position: relative;
+    padding: 10px;
+    left: 10px;
+}
+
+/* SIDEPANEL */
+/* sidepanel/messages-tab.php    ??? dat do sebe ???    */
+
+.vertical-padding-large {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* sidepanel/sidepanel.php */
+
+.left-thick-border {
+    border-left: 20px solid black;
+}
+
+.border-darker-gray {
+    border-color: #1b1b1b;
+}
+
+.border-dark-gray {
+    border-color: #353535;
+}
+
+/* OTHER */
+/* profile.php */
 
 .big-avatar {
     width: 300px;
@@ -75,75 +212,14 @@ span.profile {
     height: 100px;
 }
 
-.padding-medium {
-    padding: 16px;
-}
-
-.padding-top-large {
-    padding-top: 50px;
-}
-
-.padding-bottom-large {
-    padding-bottom: 50px;
-}
-
-.padding-horizontal-medium {
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
-.margin-horizontal-auto {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;  
-}
-
 .line-height-200 {
     line-height: 200px;
 }
 
-.margin-top-large {
-    margin-top: 50px;  
-}
-
-.margin-top-medium {
-    margin-top: 30px;
-}
-
-.margin-top-small {
-    margin-top: 16px;
-}
+/* action/showconversation.php */
 
 .margin-bottom-small {
     margin-bottom: 16px;
-}
-
-.left-thick-border {
-    border-left: 20px solid black;
-}
-
-.bottom-thick-border {
-    border-bottom: 20px solid black;
-}
-
-.gradient {
-    background: linear-gradient(to right bottom, transparent, rgb(0, 0, 0));
-    background-size: 200% 200%;
-    background-repeat: no-repeat;
-}
-
-.feed {
-    background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.72));
-}
-
-.margin-horizontal-medium {
-    margin-left: 30px;
-    margin-right: 30px;
-}
-    
-
-.message {
-    margin-top: 20px;
 }
 
 .message-modal {
@@ -166,96 +242,6 @@ span.profile {
     margin-right: auto;
     display: table;
 }
-.register input {
-    display: inline;
-    margin: 10px;
-    padding: 10px;
-}
-
-.register input[type='submit'] {
-    border: none;
-}
-
-.register {
-    text-align: left;
-    padding: 120px 70px
-}
-
-.login input {
-    display: inline;
-    margin: 10px;
-    padding: 10px;
-    background-color: transparent;
-}
-
-.login input[type='submit'] {
-    border: none;
-}
-
-.login {
-    text-align: left;
-    padding: 255px 70px
-}
-
-.colors {
-    
-}
-
-.horizontal-margin-small {
-    margin: 0 10px;
-}
-
-.vertical-margin-small {
-    margin: 10px 0;
-}
-.colors input {
-    display: none;
-}
-.colors input + label span {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    vertical-align: middle;
-    cursor: pointer;
-}
-.colors input:checked + label span {
-    border: 5px solid black;
-}
-.colors input + label span, .colors input:checked + label span {;
-    transition:border 0.4s linear;
-    margin-bottom: 4px;
-}
-
-
-.alertpanel {
-    position: relative;
-    padding: 10px;
-    left: 10px;
-}
-
-.alertpanelchange {
-    padding: 10px;
-}
-
-.darker-gray {
-    background-color: #1b1b1b;
-}
-
-.dark-gray {
-    background-color: #353535;
-}
-
-.light-gray {
-    background-color: #ededed;
-}
-
-.border-darker-gray {
-    border-color: #1b1b1b;
-}
-
-.border-dark-gray {
-    border-color: #353535;
-}
 
 #modal textarea {
     width: 100%;
@@ -275,12 +261,26 @@ span.profile {
     font-weight: 700;
 }
 
-.relative-parent {
-    position: relative;
+/* other/logo.php */
+
+.logo a {
+    font-family: 'Pacifico';
+    height: 80px;
+    line-height: 80px;
 }
 
-.time {
-    position: absolute;
-    right: 0;
-    top: 10px;
+/* other/footer.php */
+
+.footer h1 {
+    font-family: 'Pacifico';
+}
+
+/* other/menu.php */
+
+.darker-gray {
+    background-color: #1b1b1b;
+}
+
+.dark-gray {
+    background-color: #353535;
 }
