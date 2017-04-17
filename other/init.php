@@ -225,6 +225,12 @@ function showSettings($user) {
 
 function changeSettings($get) {
     global $conn;
+    $_SESSION['user']->name = $get['name'];
+    $_SESSION['user']->surname = $get['surname'];
+    $_SESSION['user']->fullname = $get['name'] . " " . $get['surname'];
+    $_SESSION['user']->email = $get['email'];
+    $_SESSION['user']->image = $get['image'];
+    $_SESSION['user']->color = $get['color'];
     $id = $_SESSION['user']->id;
     $name = $get['name'];
     $surname = $get['surname'];
