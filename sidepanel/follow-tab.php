@@ -6,7 +6,7 @@ echo "  <div class='padding-horizontal-medium whoToFollow'>
 $users = selectAllUsers();
 
 if ($_SESSION["page"] != "?whoToFollow=1") {
-    $howMuch = 5;
+    $howMuch = 8;
 }
 
 foreach ($users as $user) {
