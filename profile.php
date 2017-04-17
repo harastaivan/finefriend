@@ -54,8 +54,8 @@ $feed = $thisUser->returnIndividualFeed();
 
 foreach( $feed as $status ) {
     
-    echo "  <div class='padding-medium margin-top-medium w3-$thisUser->color gradient feed w3-round-medium'>
-                <div class='w3-row'>
+    echo "  <div class='padding-medium margin-top-medium w3-$thisUser->color gradient w3-round-medium'>
+                <div class='w3-row position-relative'>
                     <div class='w3-col' style='width:100px'>
                         <div class='avatar' style='background-image:url($thisUser->image)'></div>
                     </div>
@@ -64,6 +64,9 @@ foreach( $feed as $status ) {
                             <h3><a href='#'>$thisUser->fullname</a></h3>
                             " . $status['text'] . "
                         </div>
+                    </div>
+                    <div class='time'>
+                        " . showTime($status['timestamp']) . " ago
                     </div>
                 </div>
             </div>";  
