@@ -35,9 +35,11 @@ if ( isset($_SESSION['user']) ) {
     } else if ( isset($_GET['message']) ) {
         include('action/showconversation.php');
     } else if ( isset($_GET['sendAMessage']) ) {
-        include('action/sendamessage.php');
+        sendAMessage($_GET['who'], $_GET['whom'], $_GET['text']);
+        echo "<script>location.href=`index.php" . $_SESSION['page'] . "`</script>";
     } else if ( isset($_GET['changeSettings']) ) {
-        include('action/changesettings.php');
+        changeSettings($_GET);
+        echo "<script>location.href='index.php'</script>";
     }
     
     if ( isset($_GET['profile']) ) {
