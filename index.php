@@ -1,34 +1,24 @@
 <?php
 
 include('other/init.php');
-
-session_start();
-
 include('other/head.php');
 include('other/logo.php');
 
+session_start();
 
-
-//odhlasit se
+//log out
 if ( isset($_GET['logout']) ) {
     unset($_SESSION['user']);
     echo "<script>location.href='index.php';</script>";
 }
 
-//je prihlasen
+//logged in
 if ( isset($_SESSION['user']) ) {
+    //actions
     if ( isset($_GET['follow']) ) {
-        
-        follow($_SESSION['user']->id, $_GET['follow']);
-        //include('feed.php');
-        //include('sidepanel/sidepanel.php');
-        
+        follow($_SESSION['user']->id, $_GET['follow']);        
     } else if ( isset($_GET['unfollow']) ) {
-        
         unfollow($_SESSION['user']->id, $_GET['unfollow']);
-        //include('feed.php');
-        //include('sidepanel/sidepanel.php');
-        
     } else if ( isset($_GET['new_status']) ) {
         createStatus($_SESSION['user']->id, $_GET['text']);
         echo "<script>location.href = 'index.php" . $_SESSION['page'] . "'</script>";
@@ -42,6 +32,7 @@ if ( isset($_SESSION['user']) ) {
         echo "<script>location.href='index.php'</script>";
     }
     
+    //pages
     if ( isset($_GET['profile']) ) {
         $_SESSION['page'] = "?profile=" . $_GET['profile'];
         include('profile.php');

@@ -1,5 +1,5 @@
 <div class='w3-row'>
-    <div class='w3-col l6 w3-padding-medium w3-center light-gray'>
+    <div class='w3-col l6 m12 s12 w3-padding-medium w3-center light-gray'>
     <h1>Log In.</h1>
     <div class='w3-container login'>
         <form method="post">

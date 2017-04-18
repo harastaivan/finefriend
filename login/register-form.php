@@ -1,4 +1,4 @@
-    <div class='w3-col l6 w3-padding-medium w3-center'>
+    <div class='w3-col l6 m12 s12 w3-padding-medium w3-center'>
         <h2>You don't have an account yet?</h2>
         <h2>Register.</h2>
         <div class='w3-container register'>

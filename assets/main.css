@@ -1,7 +1,7 @@
 /* GENERAL */
 
 html {
-    font-family: 'Roboto';
+    font-family: 'Open Sans';
 }
 
 body {
@@ -154,7 +154,7 @@ input:focus {
     background-color: #ededed;
 }
 
-/* login/login.php */
+/* login/login-form.php + login/register-form.php */
 
 .alertpanel {
     position: relative;
