@@ -61,7 +61,8 @@ if ( isset($_SESSION['user']) ) {
     }  
     
 } else {
-    include('login/login.php');
+    require('login/login-form.php');
+    require('login/register-form.php');
 }
 
 include('other/footer.php');
