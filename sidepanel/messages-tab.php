@@ -50,7 +50,7 @@ foreach ($contactedUsers as $cU) {
     $lastMsg = end($individualMessages)['text'];
     
     echo "  <a href='?message=$cU->id'>
-                <div class='w3-row padding-medium'>
+                <div class='w3-row'>
                     <div class='w3-col' style='width:100px'>
                         <div class='avatar' style='background-image:url($cU->image)'></div>
                     </div>

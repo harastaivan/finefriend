@@ -170,6 +170,10 @@ input:focus {
     padding-bottom: 50px;
 }
 
+.messages > a > div {
+    padding: 10px 5px;
+}
+
 .messages > a:hover {
     display: block;
     background-color: #eaeaea;
