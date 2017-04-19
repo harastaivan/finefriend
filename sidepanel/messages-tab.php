@@ -49,17 +49,19 @@ foreach ($contactedUsers as $cU) {
     }
     $lastMsg = end($individualMessages)['text'];
     
-    echo "  <div class='w3-row margin-top-small'>
-                <div class='w3-col' style='width:100px'>
-                    <div class='avatar' style='background-image:url($cU->image)'></div>
-                </div>
-                <div class='w3-rest'>
-                    <div class='w3-container'>
-                        <h3><a href='?message=$cU->id'>$cU->fullname</a></h3>
-                        <b>Last:</b> $lastMsg                            
+    echo "  <a href='?message=$cU->id'>
+                <div class='w3-row padding-medium'>
+                    <div class='w3-col' style='width:100px'>
+                        <div class='avatar' style='background-image:url($cU->image)'></div>
+                    </div>
+                    <div class='w3-rest'>
+                        <div class='w3-container'>
+                            <h3>$cU->fullname</h3>
+                            <b>Last:</b> $lastMsg                            
+                        </div>
                     </div>
                 </div>
-            </div>";
+            </a>";
 }
 
 if (empty($contactedUsers)) {

@@ -163,11 +163,16 @@ input:focus {
 }
 
 /* SIDEPANEL */
-/* sidepanel/messages-tab.php    ??? dat do sebe ???    */
+/* sidepanel/messages-tab.php */
 
 .vertical-padding-large {
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+.messages > a:hover {
+    display: block;
+    background-color: #eaeaea;
 }
 
 /* sidepanel/sidepanel.php */
