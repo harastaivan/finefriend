@@ -30,7 +30,7 @@ echo "          </div>
                     &nbsp
                 </div>
                 <div class='w3-col l4 m4 s5 margin-horizontal-auto line-height-200'>
-                    <a href='" . $_SESSION['page'] . "&showFollowers=$thisUser->id'>Show Followers</a>
+                    <a href='" . $_SESSION['page'] . "&showFollowers=$thisUser->id'>Show Followers of $thisUser->name</a>
                 </div>
             </div>
         </div>";
