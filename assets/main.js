@@ -14,13 +14,19 @@ $(document).ready(function(){
 })
 
 function showMessages() {
+    whoToFollow.hide(500);
+    profileTab.hide(500);
     messages.toggle(500);
 }
 
 function showWhoToFollow() {
+    messages.hide(500);
+    profileTab.hide(500);
     whoToFollow.toggle(500);
 }
 
 function showProfileTab() {
+    messages.hide(500);
+    whoToFollow.hide(500);
     profileTab.toggle(500);
 }
