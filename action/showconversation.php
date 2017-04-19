@@ -16,7 +16,7 @@ echo '  <div id="modal" class="w3-modal" style="display: block">
             <div class="w3-container">
               <span onclick="document.getElementById(\'modal\').style.display=\'none\'; location.href=\'index.php' . $_SESSION['page'] . '\'"
               class="w3-button w3-display-topright">&times;</span>
-              <div class="margin-top-small">
+              <div class="margin-top-small w3-row">
                 <div class="w3-col" style="width:100px">
                     <div class="avatar margin-bottom-small" style="background-image:url(' . $recipient->image . ')"></div>
                 </div>
@@ -32,7 +32,7 @@ echo "  <form>
                 <textarea name='text' placeholder='Type a message...' required></textarea>
             </div>
             <div class='w3-row'>
-                <input type='submit' value='Send'>
+                <input type='submit' class='w3-" . $_SESSION['user']->color . "' value='Send'>
             </div>
             <input type='hidden' name='sendAMessage' value='1'>
             <input type='hidden' name='who' value='$sender->id'>

@@ -130,11 +130,13 @@ function showMessages($who, $whom) {
         if ($row['sender_id'] == $who->id) {
             $spec = "sender";
             $name = $who->fullname;
+            $color = $who->color;
         } else {
             $spec = "recipient";
             $name = $whom->fullname;
+            $color = $whom->color;
         }
-        echo "  <div class='message-modal $spec'>";
+        echo "  <div class='message-modal $spec w3-$color'>";
         echo        "<b>" . $name . ": </b>" . $row['text'];
         echo "  </div>";
     }
