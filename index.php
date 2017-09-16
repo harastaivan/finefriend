@@ -1,10 +1,11 @@
 <?php
 
 include('other/init.php');
-include('other/head.php');
-include('other/logo.php');
 
 session_start();
+
+include('other/head.php');
+include('other/logo.php');
 
 //log out
 if ( isset($_GET['logout']) ) {
@@ -16,7 +17,7 @@ if ( isset($_GET['logout']) ) {
 if ( isset($_SESSION['user']) ) {
     //actions
     if ( isset($_GET['follow']) ) {
-        follow($_SESSION['user']->id, $_GET['follow']);        
+        follow($_SESSION['user']->id, $_GET['follow']);
     } else if ( isset($_GET['unfollow']) ) {
         unfollow($_SESSION['user']->id, $_GET['unfollow']);
     } else if ( isset($_GET['new_status']) ) {
@@ -31,7 +32,7 @@ if ( isset($_SESSION['user']) ) {
         changeSettings($_GET);
         echo "<script>location.href='index.php'</script>";
     }
-    
+
     //pages
     if ( isset($_GET['profile']) ) {
         $_SESSION['page'] = "?profile=" . $_GET['profile'];
@@ -48,9 +49,9 @@ if ( isset($_SESSION['user']) ) {
     } else {
         $_SESSION['page'] = "?feed=1";
         include('feed.php');
-        include('sidepanel/sidepanel.php'); 
-    }  
-    
+        include('sidepanel/sidepanel.php');
+    }
+
 } else {
     require('login/login-form.php');
     require('login/register-form.php');
