@@ -1,7 +1,7 @@
 <?php
 
 $user = 'root';
-$pw = '1777';
+$pw = 'root';
 $host = '127.0.0.1:3306';
 $dbname = 'finefriend';
 $conn = new mysqli($host, $user, $pw, $dbname);
